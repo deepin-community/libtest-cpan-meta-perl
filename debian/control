@@ -1,0 +1,32 @@
+Source: libtest-cpan-meta-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Vincent Danjean <vdanjean@debian.org>,
+           Ryan Niebur <ryan@debian.org>,
+           Jonathan Yu <jawnsy@cpan.org>,
+           gregor herrmann <gregoa@debian.org>,
+           Florian Schlichting <fsfs@debian.org>
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: perl,
+                     libtest-pod-coverage-perl,
+                     libtest-pod-perl
+Standards-Version: 3.9.6
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libtest-cpan-meta-perl.git
+Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libtest-cpan-meta-perl.git
+Homepage: https://metacpan.org/release/Test-CPAN-Meta
+Testsuite: autopkgtest-pkg-perl
+
+Package: libtest-cpan-meta-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         perl
+Description: test module to validate package metadata for CPAN
+ Test::CPAN::Meta is a Perl test module for validating that the META.yml or
+ META.json file, included in all standard distributions uploaded to CPAN, is
+ correct. To work properly, these files must conform to the CPAN Metadata
+ Specification (see <URL:http://search.cpan.org/dist/CPAN-Meta-Spec>)
+ .
+ This package is considered the successor of Test::CPAN::Meta::YAML and
+ Test::CPAN::Meta::JSON.
